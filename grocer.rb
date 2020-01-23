@@ -33,6 +33,15 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
 end
 
+def mk_coupon_hash(c)
+  rounded_unit_price = (c[:cost].to_f * 1.0 / c[:num]).round(2)
+  {
+    :item => "#{c[:item]} W/COUPON",
+    :price => rounded_unit_price,
+    :count => c[:num]
+  }
+end
+
 
 
 def apply_coupons(cart, coupons)
