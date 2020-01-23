@@ -11,6 +11,12 @@ def find_item_by_name_in_collection(name, collection)
 end
 
 def consolidate_cart(cart)
+  i = 0 
+  result = []
+  
+  while i < cart.count do 
+    item_name = cart[i][:item]
+    sought_item  = 
   # Consult README for inputs and outputs
   #
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
