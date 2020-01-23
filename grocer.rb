@@ -111,4 +111,6 @@ def checkout(cart, coupons)
   # some irritated customers
 end
 
-
+def items_total_cost(i)
+  i[:count] * i[:price]
+end
